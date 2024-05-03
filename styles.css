@@ -1,4 +1,5 @@
 /* styles.css */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -12,19 +13,13 @@ body {
 }
 
 button {
-    background-color: #e91e63; /* Розовый цвет для кнопок */
+    background-color: #ff66a3; /* Розовый цвет для кнопок */
     color: white;
     padding: 10px 20px;
     border: none;
-    border-radius: 5px; /* Добавляем закругленные углы */
     cursor: pointer;
     margin: 10px;
-    transition: background-color 0.3s ease; /* Плавное изменение цвета при наведении */
-    font-size: 18px; /* Увеличиваем размер текста на кнопках */
-}
-
-button:hover {
-    background-color: #c2185b; /* Темнее розовый цвет при наведении */
+    border-radius: 5px; /* Добавляем закругленные углы */
 }
 
 .modal {
@@ -45,6 +40,7 @@ button:hover {
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    border-radius: 10px; /* Добавляем закругленные углы */
 }
 
 .close {
@@ -59,4 +55,30 @@ button:hover {
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+
+/* Анимация сердечек */
+@keyframes heartAnimation {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-30px) rotate(45deg);
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+/* Анимация загрузки сердечка */
+@keyframes pulseAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
