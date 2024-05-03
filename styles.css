@@ -4,7 +4,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('Photos/background.png'); /* Фоновое изображение */
+    background-image: url('Photos/background.jpg'); /* Фоновое изображение */
     background-size: cover; /* Заполнить всю доступную область */
     background-position: center; /* Центрировать изображение */
 }
@@ -68,19 +68,38 @@ button {
     cursor: pointer;
 }
 
+.photos {
+    display: flex;
+    justify-content: center;
+}
+
+.photo-container {
+    position: relative;
+}
+
 .photos img {
     border: 2px dashed white;
     margin: 10px;
+    max-width: 300px; /* Максимальная ширина фотографии */
+    transform-origin: top left;
 }
 
 .photo-1 {
-    transform: rotate(-5deg);
-    width: 300px;
-    height: auto;
+    transform: rotate(-5deg); /* Поворот первой фотографии на 5 градусов влево */
 }
 
 .photo-2 {
-    transform: rotate(8deg);
-    width: 300px;
-    height: auto;
+    transform: rotate(8deg); /* Поворот второй фотографии на 8 градусов вправо */
+}
+
+.photo-caption {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.7); /* Прозрачный фон */
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-style: italic;
 }
