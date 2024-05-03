@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", function() {
         var heartAnimation = document.getElementById("heartAnimation");
         heartAnimation.style.display = "block";
         setTimeout(function() {
-            giftModal.style.display = "block";
             heartAnimation.style.display = "none";
+            giftModal.style.display = "block";
         }, 5000);
     });
 
