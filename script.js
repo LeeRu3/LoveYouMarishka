@@ -1,12 +1,10 @@
+// script.js
 document.addEventListener("DOMContentLoaded", function() {
     var memoriesBtn = document.getElementById("memoriesBtn");
     var giftBtn = document.getElementById("giftBtn");
     var memoriesModal = document.getElementById("memoriesModal");
     var giftModal = document.getElementById("giftModal");
     var closeBtns = document.getElementsByClassName("close");
-    var yesButton = document.querySelector('.yes-button');
-    var noButton = document.querySelector('.no-button');
-    var messageFrame = document.getElementById('messageFrame');
 
     memoriesBtn.addEventListener("click", function() {
         memoriesModal.style.display = "block";
@@ -32,17 +30,23 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    yesButton.addEventListener('click', function() {
-        var successMessage = document.createElement('div');
-        successMessage.textContent = "Ваш ответ был отправлен к 'Любимому мужу', благодарим <3";
-        successMessage.classList.add('success-message');
-        document.body.appendChild(successMessage);
-        setTimeout(function(){
-            document.body.removeChild(successMessage);
+    // Обработчик для кнопки "Да"
+    var yesButton = document.querySelector(".yes-button");
+    yesButton.addEventListener("click", function() {
+        // Отображаем рамку с сообщением
+        var confirmationMessage = document.getElementById("confirmationMessage");
+        confirmationMessage.style.display = "block";
+        // Через 10 секунд скрываем рамку
+        setTimeout(function() {
+            confirmationMessage.style.display = "none";
         }, 10000);
     });
 
-    noButton.addEventListener('click', function() {
-        alert("А так нельзя, дамочка, вы арестованы за попытку отказа, с вас 100 поцелуев и 1000 обьятий, сообщение об нарушении уже отправлено к Любимому мужу <3");
+    // Обработчик для кнопки закрытия рамки с сообщением
+    var closeButton = document.querySelector(".close-button");
+    closeButton.addEventListener("click", function() {
+        // Скрываем рамку с сообщением
+        var confirmationMessage = document.getElementById("confirmationMessage");
+        confirmationMessage.style.display = "none";
     });
 });
