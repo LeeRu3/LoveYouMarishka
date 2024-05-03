@@ -1,5 +1,3 @@
-/* styles.css */
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -74,10 +72,6 @@ button {
     position: relative;
 }
 
-.photo-container {
-    position: relative;
-}
-
 .photos img {
     border: 2px dashed white;
     max-width: 300px; /* Максимальная ширина фотографии */
@@ -86,4 +80,19 @@ button {
 
 .photo-1 {
     transform: rotate(-5deg); /* Поворот первой фотографии на 5 градусов влево */
+}
+
+.photo-caption {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.7); /* Прозрачный фон */
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-style: italic;
+    font-size: 14px; /* Размер шрифта */
+    width: 80%; /* Ширина блока с текстом */
+    max-width: 300px; /* Максимальная ширина */
 }
