@@ -87,23 +87,3 @@ button {
 .photo-1 {
     transform: rotate(-5deg); /* Поворот первой фотографии на 5 градусов влево */
 }
-
-.photo-2 {
-    transform: rotate(8deg); /* Поворот второй фотографии на 8 градусов вправо */
-    position: absolute;
-    top: 200px; /* Сдвигаем вторую фотографию вниз */
-    left: 50%; /* Выравниваем по горизонтали */
-    transform: translateX(-50%) rotate(-8deg); /* Смещаем влево на 50% ширины элемента и поворачиваем */
-}
-
-.photo-caption {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(255, 255, 255, 0.7); /* Прозрачный фон */
-    padding: 10px;
-    border-radius: 5px;
-    text-align: center;
-    font-style: italic;
-}
