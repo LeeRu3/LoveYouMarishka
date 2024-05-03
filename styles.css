@@ -12,12 +12,19 @@ body {
 }
 
 button {
-    background-color: #ff66a3; /* Розовый цвет для кнопок */
+    background-color: #e91e63; /* Розовый цвет для кнопок */
     color: white;
     padding: 10px 20px;
     border: none;
+    border-radius: 5px; /* Добавляем закругленные углы */
     cursor: pointer;
     margin: 10px;
+    transition: background-color 0.3s ease; /* Плавное изменение цвета при наведении */
+    font-size: 18px; /* Увеличиваем размер текста на кнопках */
+}
+
+button:hover {
+    background-color: #c2185b; /* Темнее розовый цвет при наведении */
 }
 
 .modal {
