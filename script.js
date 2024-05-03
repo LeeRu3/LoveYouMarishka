@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     yesButton.addEventListener('click', function() {
+        var confirmationMessage = document.getElementById("confirmationMessage");
         messageFrame.style.display = 'block';
         setTimeout(function(){
             messageFrame.style.display = 'none';
