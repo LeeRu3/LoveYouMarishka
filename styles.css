@@ -1,8 +1,10 @@
 /* styles.css */
 
-/* Добавляем отступ под кнопками */
-button {
-    margin-bottom: 20px;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fde7ea; /* Пастельный фон в стиле любви */
 }
 
 .main-content {
@@ -10,21 +12,68 @@ button {
     margin-top: 50px;
 }
 
+button {
+    background-color: #ff66a3; /* Розовый цвет для кнопок */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 5px; /* Добавляем закругленные углы */
+    margin-bottom: 20px; /* Добавляем отступ снизу для кнопок */
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 10px; /* Добавляем закругленные углы */
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Рамочка для фотографий */
 .photos img {
     border: 2px dashed white;
-    margin: 10px;
+    margin: 10px; /* Добавляем небольшой внутренний отступ */
 }
 
 /* Поворачиваем первую фотографию налево на 20 градусов */
 .photo-1 {
-    transform: rotate(5deg);
-    width: 200px;
-    height: auto;
+    transform: rotate(-20deg);
+    width: 200px; /* Задаем ширину фотографии */
+    height: auto; /* Автоматический подбор высоты */
 }
 
 /* Поворачиваем вторую фотографию налево на 30 градусов */
 .photo-2 {
-    transform: rotate(8deg);
-    width: 200px;
-    height: auto;
+    transform: rotate(30deg);
+    width: 200px; /* Задаем ширину фотографии */
+    height: auto; /* Автоматический подбор высоты */
 }
