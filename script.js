@@ -1,12 +1,9 @@
-// script.js
 document.addEventListener("DOMContentLoaded", function() {
     var memoriesBtn = document.getElementById("memoriesBtn");
     var giftBtn = document.getElementById("giftBtn");
     var memoriesModal = document.getElementById("memoriesModal");
     var giftModal = document.getElementById("giftModal");
     var closeBtns = document.getElementsByClassName("close");
-    var yesButton = document.querySelector(".yes-button");
-    var messageFrame = document.querySelector(".message-frame");
 
     memoriesBtn.addEventListener("click", function() {
         memoriesModal.style.display = "block";
@@ -32,12 +29,23 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
+    // Обработчик для кнопки "Да"
+    var yesButton = document.querySelector(".yes-button");
     yesButton.addEventListener("click", function() {
-        // Показываем рамку с сообщением
-        messageFrame.style.display = "block";
+        // Отображаем рамку с сообщением
+        var confirmationMessage = document.getElementById("confirmationMessage");
+        confirmationMessage.style.display = "block";
         // Через 10 секунд скрываем рамку
         setTimeout(function() {
-            messageFrame.style.display = "none";
+            confirmationMessage.style.display = "none";
         }, 10000);
+    });
+
+    // Обработчик для кнопки закрытия рамки с сообщением
+    var closeButton = document.querySelector(".close-button");
+    closeButton.addEventListener("click", function() {
+        // Скрываем рамку с сообщением
+        var confirmationMessage = document.getElementById("confirmationMessage");
+        confirmationMessage.style.display = "none";
     });
 });
