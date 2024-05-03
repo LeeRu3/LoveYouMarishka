@@ -4,8 +4,6 @@ document.addEventListener("DOMContentLoaded", function() {
     var memoriesModal = document.getElementById("memoriesModal");
     var giftModal = document.getElementById("giftModal");
     var closeBtns = document.getElementsByClassName("close");
-    var yesButton = document.querySelector('.yes-button');
-    var noButton = document.querySelector('.no-button');
     var messageFrame = document.getElementById('messageFrame');
 
     memoriesBtn.addEventListener("click", function() {
@@ -31,6 +29,9 @@ document.addEventListener("DOMContentLoaded", function() {
             giftModal.style.display = "none";
         }
     });
+
+    var yesButton = document.querySelector('.yes-button');
+    var noButton = document.querySelector('.no-button');
 
     yesButton.addEventListener('click', function() {
         messageFrame.style.display = 'block';
