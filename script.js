@@ -9,11 +9,11 @@ document.addEventListener("DOMContentLoaded", function() {
     var messageFrame = document.getElementById('messageFrame');
 
     memoriesBtn.addEventListener("click", function() {
-        memoriesModal.style.display = "block";
+        toggleModal(memoriesModal);
     });
 
     giftBtn.addEventListener("click", function() {
-        giftModal.style.display = "block";
+        toggleModal(giftModal);
     });
 
     for (var i = 0; i < closeBtns.length; i++) {
@@ -34,7 +34,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Обработчик для кнопки "Да"
     yesButton.addEventListener('click', function() {
-        alert("Ваш ответ был отправлен к вашему любимому мужу, благодарим <3");
+        toggleMessageFrame(messageFrame);
+        setTimeout(function() {
+            toggleMessageFrame(messageFrame);
+        }, 10000);
     });
 
     // Обработчик для кнопки "Нет"
@@ -42,8 +45,11 @@ document.addEventListener("DOMContentLoaded", function() {
         alert("А так нельзя, дамочка, вы арестованы за попытку отказа, с вас 100 поцелуев и 1000 обьятий, сообщение об нарушении уже отправлено к Любимому мужу <3");
     });
 
-    function closeMessageFrame() {
-        var messageFrame = document.getElementById('messageFrame');
-        messageFrame.style.display = 'none';
+    function toggleModal(modal) {
+        modal.style.display = (modal.style.display === "block") ? "none" : "block";
+    }
+
+    function toggleMessageFrame(frame) {
+        frame.style.display = (frame.style.display === "block") ? "none" : "block";
     }
 });
