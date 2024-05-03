@@ -74,13 +74,13 @@ button {
 }
 
 .photo-1 {
-    transform: rotate(-20deg);
-    width: 200px;
+    transform: rotate(-5deg);
+    width: 300px;
     height: auto;
 }
 
 .photo-2 {
-    transform: rotate(30deg);
-    width: 200px;
+    transform: rotate(8deg);
+    width: 300px;
     height: auto;
 }
