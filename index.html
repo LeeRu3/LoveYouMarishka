@@ -18,18 +18,17 @@
     <div class="photos">
         <div class="photo-container">
             <img src="Photos/loveyou.png" alt="Фото 1" class="photo-1"><br>
-        </div>
-    </div>
-    <div class="message-frame" id="messageFrame" style="display: none;">
-        <p class="message">Наше будущее будет выглядеть именно так, если ты станешь моей женой. Ты готова сказать "Да"?</p>
-        <div class="button-container">
+            <div class="photo-caption">Наше будущее будет выглядеть именно так, если ты станешь моей женой. Ты готова сказать "Да"?</div>
+            <!-- Добавляем кнопку "Да" -->
             <button class="yes-button">Да</button>
-            <button class="no-button">Нет</button>
-        </div>
-        <div id="confirmationMessage" style="display: none;">
-            <p>Ваш ответ был отправлен к вашему любимому мужу, благодарим <3</p>
         </div>
     </div>
+</div>
+
+<!-- Рамка с сообщением после нажатия кнопки "Да" -->
+<div id="confirmationMessage" class="message-frame" style="display: none;">
+    <span class="close-button">&times;</span>
+    <p>Ваш ответ был отправлен к "Любимому мужу". Благодарим <3</p>
 </div>
 
 <div id="memoriesModal" class="modal">
@@ -53,7 +52,7 @@
         <p>Дорогая [Имя девушки], сегодня особенный день, ведь мы отмечаем 9 месяцев нашего счастья вместе. Я хочу сказать тебе, что ты - самое важное в моей жизни, и каждый день с тобой - это подарок. Спасибо, что ты рядом. С любовью, [Твое имя].</p>
     </div>
 </div>
-    
+
 <script src="script.js"></script>
 </body>
 </html>
