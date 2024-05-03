@@ -35,16 +35,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
     yesButton.addEventListener('click', function() {
         messageFrame.style.display = 'block';
-        setTimeout(function() {
+        setTimeout(function(){
             messageFrame.style.display = 'none';
-        }, 10000); // Hide message frame after 10 seconds
+        }, 10000);
     });
 
     noButton.addEventListener('click', function() {
-        alert('А так нельзя, дамочка');
+        alert("А так нельзя, дамочка, вы арестованы за попытку отказа, с вас 100 поцелуев и 1000 обьятий, сообщение об нарушении уже отправлено к "Любимому мужу" <3");
     });
 });
 
 function closeMessageFrame() {
-    document.getElementById('messageFrame').style.display = 'none';
+    var messageFrame = document.getElementById('messageFrame');
+    messageFrame.style.display = 'none';
 }
