@@ -37,15 +37,13 @@ document.addEventListener("DOMContentLoaded", function() {
         setTimeout(function(){
             messageFrame.style.display = 'none';
         }, 10000);
-        // Включаем функцию closeMessageFrame
-        closeMessageFrame();
+        closeMessageFrame(); // Переместили вызов closeMessageFrame сюда
     });
 
     noButton.addEventListener('click', function() {
         alert("А так нельзя, дамочка, вы арестованы за попытку отказа, с вас 100 поцелуев и 1000 обьятий, сообщение об нарушении уже отправлено к Любимому мужу <3");
     });
 
-    // Перенесем функцию closeMessageFrame внутрь области видимости скрипта
     function closeMessageFrame() {
         var messageFrame = document.getElementById('messageFrame');
         messageFrame.style.display = 'none';
