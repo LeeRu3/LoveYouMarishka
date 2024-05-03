@@ -83,56 +83,39 @@ button {
 }
 
 .photo-1 {
-    transform: rotate(1deg); /* Поворот первой фотографии на 5 градусов влево */
+    transform: rotate(2deg); /* Поворот первой фотографии на 5 градусов влево */
 }
 
-.photo-caption {
-    position: absolute;
-    bottom: -40px; /* Смещаем подпись вверх */
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(255, 255, 255, 0.7); /* Прозрачный фон */
+.message-frame {
+    background-color: #ff99cc; /* Розовый цвет для рамки */
+    border: 2px solid #ff66a3; /* Розовый цвет для рамки */
     padding: 10px;
-    border-radius: 5px;
-    text-align: center;
-    font-style: italic;
-    font-size: 14px; /* Размер шрифта */
-    width: 80%; /* Ширина блока с текстом */
-    max-width: 300px; /* Максимальная ширина */
+    border-radius: 5px; /* Закругленные углы */
+    width: 80%; /* Ширина блока с рамкой */
+    max-width: 400px; /* Максимальная ширина */
+    margin: 20px auto; /* Отступы по вертикали и горизонтали */
 }
 
-/* Добавляем стили для кнопки "Да" */
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
 .yes-button {
-    display: inline-block;
-    padding: 8px 16px;
-    background-color: #ff66a3; /* Розовый цвет кнопки "Да" */
+    background: linear-gradient(to bottom, #ff66a3, #ff3366); /* Градиентный розовый фон */
     color: white;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    margin-top: 20px; /* Отступ сверху */
+    padding: 8px 20px;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-/* Стили для рамки с сообщением */
-.message-frame {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    background-color: #fff;
-    border: 2px solid #4CAF50; /* Зеленая рамка */
-    border-radius: 10px;
-    z-index: 1000;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
-/* Стили для кнопки закрытия рамки */
-.close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+.no-button {
+    background-color: #ddd; /* Серый фон */
+    color: #666; /* Цвет текста */
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
