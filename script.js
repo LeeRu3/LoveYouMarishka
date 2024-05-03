@@ -1,9 +1,12 @@
+// script.js
 document.addEventListener("DOMContentLoaded", function() {
     var memoriesBtn = document.getElementById("memoriesBtn");
     var giftBtn = document.getElementById("giftBtn");
     var memoriesModal = document.getElementById("memoriesModal");
     var giftModal = document.getElementById("giftModal");
     var closeBtns = document.getElementsByClassName("close");
+    var yesButton = document.querySelector('.yes-button');
+    var noButton = document.querySelector('.no-button');
     var messageFrame = document.getElementById('messageFrame');
 
     memoriesBtn.addEventListener("click", function() {
@@ -30,13 +33,10 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    var yesButton = document.querySelector('.yes-button');
-    var noButton = document.querySelector('.no-button');
-
     yesButton.addEventListener('click', function() {
         messageFrame.style.display = 'block';
         setTimeout(function(){
-//            messageFrame.style.display = 'none';
+            messageFrame.style.display = 'none';
         }, 10000);
     });
 
@@ -44,3 +44,8 @@ document.addEventListener("DOMContentLoaded", function() {
         alert("А так нельзя, дамочка, вы арестованы за попытку отказа, с вас 100 поцелуев и 1000 обьятий, сообщение об нарушении уже отправлено к Любимому мужу <3");
     });
 });
+
+function closeMessageFrame() {
+    var messageFrame = document.getElementById('messageFrame');
+    messageFrame.style.display = 'none';
+}
