@@ -57,66 +57,6 @@ button {
     cursor: pointer;
 }
 
-/* Анимация сердечек */
-@keyframes heartAnimation {
-    0% {
-        transform: translateY(0) rotate(0deg);
-    }
-    50% {
-        transform: translateY(-30px) rotate(45deg);
-    }
-    100% {
-        transform: translateY(0) rotate(0deg);
-    }
-}
-
-/* Анимация загрузки сердечка */
-@keyframes pulseAnimation {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.2);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-.heart-animation {
-    position: fixed;
-    width: 100px;
-    height: 100px;
-    background-color: transparent;
-    z-index: 999;
-    animation: heartAnimation 5s ease-in-out;
-}
-
-.heart-animation:before,
-.heart-animation:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    width: 50px;
-    height: 100px;
-    background-color: #ff66a3; /* Розовый цвет для сердечка */
-    border-radius: 50px 50px 0 0;
-}
-
-.heart-animation:before {
-    left: 50px;
-    border-radius: 50px 50px 0 0;
-    transform: rotate(-45deg);
-    transform-origin: 0 100%;
-}
-
-.heart-animation:after {
-    right: 50px;
-    border-radius: 50px 50px 0 0;
-    transform: rotate(45deg);
-    transform-origin: 100% 100%;
-}
-
 /* Поворачиваем первую фотографию налево на 30 градусов */
 .photo-1 {
     transform: rotate(-30deg);
