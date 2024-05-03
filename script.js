@@ -29,7 +29,8 @@ document.addEventListener("DOMContentLoaded", function() {
             giftModal.style.display = "none";
         }
     });
-});
+
+    // Обработчик для кнопки "Да"
     var yesButton = document.querySelector(".yes-button");
     yesButton.addEventListener("click", function() {
         // Отображаем рамку с сообщением
