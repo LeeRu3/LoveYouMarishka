@@ -85,7 +85,7 @@ button {
 }
 
 .photo-1 {
-    transform: rotate(3deg); /* Поворот первой фотографии на 5 градусов влево */
+    transform: rotate(2deg); /* Поворот первой фотографии на 5 градусов влево */
 }
 
 .photo-caption {
