@@ -1,4 +1,3 @@
-// script.js
 document.addEventListener("DOMContentLoaded", function() {
     var memoriesBtn = document.getElementById("memoriesBtn");
     var giftBtn = document.getElementById("giftBtn");
