@@ -17,10 +17,12 @@
     <button id="giftBtn">Открыть подарок</button>
     <div class="photos">
         <div class="photo-container">
-            <img src="Photos/loveyou.png" alt="Фото 1" class="photo-1"><br>
+            <img src="Photos/loveyou.png" alt="Фото 1" class="photo-1">
             <div class="photo-caption">Наше будущее будет выглядеть именно так, если ты станешь моей женой. Ты готова сказать "Да"?</div>
-            <!-- Добавляем кнопку "Да" -->
-            <button class="yes-button">Да</button>
+            <div class="button-container">
+                <button class="yes-button">Да</button>
+                <button class="no-button">Нет</button>
+            </div>
         </div>
     </div>
 </div>
@@ -47,10 +49,9 @@
     </div>
 </div>
 
-<!-- Добавляем рамку с сообщением -->
-<div id="confirmationMessage" class="message-frame" style="display: none;">
-    <span class="close-button">&times;</span>
-    <p>Ваш ответ был отправлен к "Любимому мужу". Благодарим <3</p>
+<div class="message-frame" id="messageFrame">
+    <span class="close-button" onclick="closeMessageFrame()">&times;</span>
+    <p>Ваш ответ был отправлен к "Любимому мужу". Благодарим ❤️</p>
 </div>
 
 <script src="script.js"></script>
