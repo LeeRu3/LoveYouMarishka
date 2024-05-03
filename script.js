@@ -1,4 +1,3 @@
-// script.js
 document.addEventListener("DOMContentLoaded", function() {
     var memoriesBtn = document.getElementById("memoriesBtn");
     var giftBtn = document.getElementById("giftBtn");
@@ -38,14 +37,17 @@ document.addEventListener("DOMContentLoaded", function() {
         setTimeout(function(){
             messageFrame.style.display = 'none';
         }, 10000);
+        // Включаем функцию closeMessageFrame
+        closeMessageFrame();
     });
 
     noButton.addEventListener('click', function() {
         alert("А так нельзя, дамочка, вы арестованы за попытку отказа, с вас 100 поцелуев и 1000 обьятий, сообщение об нарушении уже отправлено к Любимому мужу <3");
     });
-});
 
-function closeMessageFrame() {
-    var messageFrame = document.getElementById('messageFrame');
-    messageFrame.style.display = 'none';
-}
+    // Перенесем функцию closeMessageFrame внутрь области видимости скрипта
+    function closeMessageFrame() {
+        var messageFrame = document.getElementById('messageFrame');
+        messageFrame.style.display = 'none';
+    }
+});
