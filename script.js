@@ -32,18 +32,19 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // Обработчик для кнопки "Да"
     yesButton.addEventListener('click', function() {
-        alert("Ваш ответ был отправлен к вашему любимому мужу, благодарим <3");
+        messageFrame.style.display = 'block';
+        setTimeout(function(){
+            messageFrame.style.display = 'none';
+        }, 10000);
     });
 
-    // Обработчик для кнопки "Нет"
     noButton.addEventListener('click', function() {
         alert("А так нельзя, дамочка, вы арестованы за попытку отказа, с вас 100 поцелуев и 1000 обьятий, сообщение об нарушении уже отправлено к Любимому мужу <3");
     });
-
-    function closeMessageFrame() {
-        var messageFrame = document.getElementById('messageFrame');
-        messageFrame.style.display = 'none';
-    }
 });
+
+function closeMessageFrame() {
+    var messageFrame = document.getElementById('messageFrame');
+    messageFrame.style.display = 'none';
+}
