@@ -4,7 +4,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('Photos/background.png'); /* Фоновое изображение */
+    background-image: url('Photos/background.jpg'); /* Фоновое изображение */
     background-size: cover; /* Заполнить всю доступную область */
     background-position: center; /* Центрировать изображение */
 }
@@ -71,33 +71,33 @@ button {
 .photos {
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 .photo-container {
-    position: relative;
+    position: absolute;
 }
 
 .photos img {
     border: 2px dashed white;
-    margin: 10px;
     max-width: 300px; /* Максимальная ширина фотографии */
     transform-origin: top left;
-    position: relative;
 }
 
 .photo-1 {
-    transform: rotate(-5deg) translateY(-30px); /* Поворот первой фотографии на 5 градусов влево */
+    transform: rotate(-5deg); /* Поворот первой фотографии на 5 градусов влево */
 }
 
 .photo-2 {
-    transform: rotate(8deg) translateY(-60px); /* Поворот второй фотографии на 8 градусов вправо */
+    transform: rotate(8deg); /* Поворот второй фотографии на 8 градусов вправо */
+    top: 150px; /* Сдвигаем вторую фотографию вниз */
 }
 
 .photo-caption {
     position: absolute;
     bottom: 10px;
     left: 50%;
-    transform: translateY(-50%);
+    transform: translateX(-50%);
     background-color: rgba(255, 255, 255, 0.7); /* Прозрачный фон */
     padding: 10px;
     border-radius: 5px;
