@@ -103,29 +103,39 @@ button {
     max-width: 300px; /* Максимальная ширина */
 }
 
-/* Добавляем стили для кнопки "Да" */
+.button-container {
+    margin-top: 10px; /* Отступ между фото и кнопками */
+}
+
 .yes-button {
-    display: inline-block;
-    padding: 8px 16px;
-    background-color: #4CAF50; /* Зеленый цвет кнопки */
+    background-image: linear-gradient(to right, #ff007a, #ff66a3); /* Градиентный фон */
     color: white;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    margin-top: 20px; /* Отступ сверху */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px; /* Отступ между кнопками */
+}
+
+.no-button {
+    background-color: #ccc; /* Серый цвет для кнопки "Нет" */
+    color: #333;
+    border: none;
+    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
 }
 
 /* Стили для рамки с сообщением */
 .message-frame {
+    display: none;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 20px;
     background-color: #fff;
-    border: 2px solid #4CAF50; /* Зеленая рамка */
+    border: 2px solid #ff66a3; /* Розовая рамка */
     border-radius: 10px;
     z-index: 1000;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
