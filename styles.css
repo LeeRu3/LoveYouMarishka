@@ -12,6 +12,14 @@ body {
     margin-top: 50px;
 }
 
+.text-container {
+    background-color: #fff; /* Белый фон */
+    padding: 20px; /* Поля вокруг текста */
+    border-radius: 5px; /* Закругленные углы */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
 button {
     background-color: #ff66a3; /* Розовый цвет для кнопок */
     color: white;
@@ -19,8 +27,8 @@ button {
     border: none;
     cursor: pointer;
     margin: 10px;
-    border-radius: 5px; /* Добавляем закругленные углы */
-    margin-bottom: 20px; /* Добавляем отступ снизу для кнопок */
+    border-radius: 5px; /* Закругленные углы */
+    margin-bottom: 20px; /* Отступ снизу для кнопок */
 }
 
 .modal {
@@ -66,14 +74,14 @@ button {
 
 /* Поворачиваем первую фотографию налево на 20 градусов */
 .photo-1 {
-    transform: rotate(-20deg);
+    transform: rotate(-5deg);
     width: 200px; /* Задаем ширину фотографии */
     height: auto; /* Автоматический подбор высоты */
 }
 
 /* Поворачиваем вторую фотографию налево на 30 градусов */
 .photo-2 {
-    transform: rotate(30deg);
+    transform: rotate(8deg);
     width: 200px; /* Задаем ширину фотографии */
     height: auto; /* Автоматический подбор высоты */
 }
