@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
     yesButton.addEventListener('click', function() {
         messageFrame.style.display = 'block';
         setTimeout(function(){
-            messageFrame.style.display = 'none';
+//            messageFrame.style.display = 'none';
         }, 10000);
     });
 
