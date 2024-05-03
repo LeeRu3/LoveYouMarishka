@@ -21,4 +21,13 @@ document.addEventListener("DOMContentLoaded", function() {
             giftModal.style.display = "none";
         });
     }
+
+    window.addEventListener("click", function(event) {
+        if (event.target == memoriesModal) {
+            memoriesModal.style.display = "none";
+        }
+        if (event.target == giftModal) {
+            giftModal.style.display = "none";
+        }
+    });
 });
