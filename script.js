@@ -1,19 +1,19 @@
+// script.js
 document.addEventListener("DOMContentLoaded", function() {
     var memoriesBtn = document.getElementById("memoriesBtn");
     var giftBtn = document.getElementById("giftBtn");
     var memoriesModal = document.getElementById("memoriesModal");
     var giftModal = document.getElementById("giftModal");
     var closeBtns = document.getElementsByClassName("close");
-    var yesButton = document.querySelector('.yes-button');
-    var noButton = document.querySelector('.no-button');
-    var messageFrame = document.getElementById('confirmationMessage'); // Изменение идентификатора на 'confirmationMessage'
+    var yesButton = document.querySelector(".yes-button");
+    var messageFrame = document.querySelector(".message-frame");
 
     memoriesBtn.addEventListener("click", function() {
-        toggleModal(memoriesModal);
+        memoriesModal.style.display = "block";
     });
 
     giftBtn.addEventListener("click", function() {
-        toggleModal(giftModal);
+        giftModal.style.display = "block";
     });
 
     for (var i = 0; i < closeBtns.length; i++) {
@@ -32,24 +32,12 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // Обработчик для кнопки "Да"
-    yesButton.addEventListener('click', function() {
-        toggleMessageFrame(messageFrame);
+    yesButton.addEventListener("click", function() {
+        // Показываем рамку с сообщением
+        messageFrame.style.display = "block";
+        // Через 10 секунд скрываем рамку
         setTimeout(function() {
-            toggleMessageFrame(messageFrame);
+            messageFrame.style.display = "none";
         }, 10000);
     });
-
-    // Обработчик для кнопки "Нет"
-    noButton.addEventListener('click', function() {
-        alert("А так нельзя, дамочка, вы арестованы за попытку отказа, с вас 100 поцелуев и 1000 обьятий, сообщение об нарушении уже отправлено к Любимому мужу <3");
-    });
-
-    function toggleModal(modal) {
-        modal.style.display = (modal.style.display === "block") ? "none" : "block";
-    }
-
-    function toggleMessageFrame(frame) {
-        frame.style.display = (frame.style.display === "block") ? "none" : "block";
-    }
 });
