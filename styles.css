@@ -83,7 +83,7 @@ button {
 }
 
 .photo-1 {
-    transform: rotate(2deg); /* Поворот первой фотографии на 5 градусов влево */
+    transform: rotate(1deg); /* Поворот первой фотографии на 5 градусов влево */
 }
 
 .photo-caption {
@@ -105,7 +105,7 @@ button {
 .yes-button {
     display: inline-block;
     padding: 8px 16px;
-    background-color: #4CAF50; /* Зеленый цвет кнопки */
+    background-color: #ff66a3; /* Розовый цвет кнопки "Да" */
     color: white;
     text-align: center;
     text-decoration: none;
