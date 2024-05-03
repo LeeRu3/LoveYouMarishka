@@ -11,8 +11,18 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     giftBtn.addEventListener("click", function() {
-        giftModal.style.display = "block";
-        // Добавь здесь анимацию для открытия подарка
+        // Добавляем анимацию загрузки сердечка
+        var heartIcon = document.createElement("span");
+        heartIcon.innerHTML = "&#10084;";
+        heartIcon.classList.add("heart-icon");
+        document.body.appendChild(heartIcon);
+        setTimeout(function() {
+            heartIcon.style.animation = "pulseAnimation 1s ease infinite";
+        }, 500);
+        setTimeout(function() {
+            heartIcon.style.display = "none";
+            giftModal.style.display = "block";
+        }, 2000);
     });
 
     for (var i = 0; i < closeBtns.length; i++) {
