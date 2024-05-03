@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var closeBtns = document.getElementsByClassName("close");
     var yesButton = document.querySelector('.yes-button');
     var noButton = document.querySelector('.no-button');
-    var messageFrame = document.getElementById('messageFrame');
+    var messageFrame = document.getElementById('confirmationMessage'); // Изменение идентификатора на 'confirmationMessage'
 
     memoriesBtn.addEventListener("click", function() {
         toggleModal(memoriesModal);
