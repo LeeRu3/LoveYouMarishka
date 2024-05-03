@@ -1,5 +1,3 @@
-/* styles.css */
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -7,6 +5,14 @@ body {
     background-image: url('Photos/background.jpg'); /* Фоновое изображение */
     background-size: cover; /* Заполнить всю доступную область */
     background-position: center; /* Центрировать изображение */
+}
+
+.text-container {
+    background-color: #fde7ea; /* Пастельный фон в стиле любви */
+    padding: 20px; /* Поля вокруг текста */
+    border-radius: 5px; /* Закругленные углы */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень */
+    margin-bottom: 20px; /* Отступ снизу */
 }
 
 .main-content {
@@ -25,25 +31,108 @@ button {
     margin-bottom: 20px; /* Отступ снизу */
 }
 
-/* Стили для рамки с сообщением */
-.message-frame {
-    background-color: #ff99cc; /* Розовый цвет для рамки */
-    border: 2px solid #ff66a3; /* Розовый цвет для рамки */
-    padding: 10px;
-    border-radius: 5px; /* Закругленные углы */
-    width: 80%; /* Ширина блока с рамкой */
-    max-width: 400px; /* Максимальная ширина */
-    margin: 20px auto; /* Отступы по вертикали и горизонтали */
-    display: none; /* Скрыто по умолчанию */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
 }
 
-/* Стили для кнопки "Да" */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 10px; /* Закругленные углы */
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.photos {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.photo-container {
+    position: relative;
+}
+
+.photos img {
+    border: 2px dashed white;
+    max-width: 300px; /* Максимальная ширина фотографии */
+    transform-origin: top left;
+}
+
+.photo-1 {
+    transform: rotate(2deg); /* Поворот первой фотографии на 5 градусов влево */
+}
+
+.photo-caption {
+    position: absolute;
+    bottom: -40px; /* Смещаем подпись вверх */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.7); /* Прозрачный фон */
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-style: italic;
+    font-size: 14px; /* Размер шрифта */
+    width: 80%; /* Ширина блока с текстом */
+    max-width: 300px; /* Максимальная ширина */
+}
+
+/* Добавляем стили для кнопки "Да" */
 .yes-button {
-    background: linear-gradient(to bottom, #ff66a3, #ff3366); /* Градиентный розовый фон */
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #4CAF50; /* Зеленый цвет кнопки */
     color: white;
-    padding: 8px 20px;
-    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 20px; /* Отступ сверху */
     border-radius: 5px;
     cursor: pointer;
 }
 
+/* Стили для рамки с сообщением */
+.message-frame {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #4CAF50; /* Зеленая рамка */
+    border-radius: 10px;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Стили для кнопки закрытия рамки */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
