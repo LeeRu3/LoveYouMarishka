@@ -75,7 +75,7 @@ button {
 }
 
 .photo-container {
-    position: absolute;
+    position: relative;
 }
 
 .photos img {
@@ -90,7 +90,10 @@ button {
 
 .photo-2 {
     transform: rotate(8deg); /* Поворот второй фотографии на 8 градусов вправо */
-    top: 150px; /* Сдвигаем вторую фотографию вниз */
+    position: absolute;
+    top: 200px; /* Сдвигаем вторую фотографию вниз */
+    left: 50%; /* Выравниваем по горизонтали */
+    transform: translateX(-50%) rotate(-8deg); /* Смещаем влево на 50% ширины элемента и поворачиваем */
 }
 
 .photo-caption {
