@@ -11,12 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     giftBtn.addEventListener("click", function() {
-        var heartAnimation = document.getElementById("heartAnimation");
-        heartAnimation.style.display = "block";
-        setTimeout(function() {
-            heartAnimation.style.display = "none";
-            giftModal.style.display = "block";
-        }, 5000);
+        giftModal.style.display = "block";
     });
 
     for (var i = 0; i < closeBtns.length; i++) {
