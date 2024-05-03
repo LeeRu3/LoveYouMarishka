@@ -33,19 +33,16 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     yesButton.addEventListener('click', function() {
-        messageFrame.style.display = 'block';
+        var successMessage = document.createElement('div');
+        successMessage.textContent = "Ваш ответ был отправлен к 'Любимому мужу', благодарим <3";
+        successMessage.classList.add('success-message');
+        document.body.appendChild(successMessage);
         setTimeout(function(){
-            messageFrame.style.display = 'none';
+            document.body.removeChild(successMessage);
         }, 10000);
-        closeMessageFrame(); // Переместили вызов closeMessageFrame сюда
     });
 
     noButton.addEventListener('click', function() {
         alert("А так нельзя, дамочка, вы арестованы за попытку отказа, с вас 100 поцелуев и 1000 обьятий, сообщение об нарушении уже отправлено к Любимому мужу <3");
     });
-
-    function closeMessageFrame() {
-        var messageFrame = document.getElementById('messageFrame');
-        messageFrame.style.display = 'none';
-    }
 });
