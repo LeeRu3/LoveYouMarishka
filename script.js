@@ -80,3 +80,11 @@ yesButton.addEventListener('click', function() {
     thankYouModal.appendChild(thankYouContent);
     document.body.appendChild(thankYouModal);
 });
+
+// Находим крестик в модальном окне благодарности
+const closeThankYouBtn = document.querySelector('.close-thank-you');
+
+// На крестик также навешиваем обработчик события click
+closeThankYouBtn.addEventListener('click', function() {
+    thankYouModal.style.display = 'none'; // Закрываем модальное окно благодарности
+});
