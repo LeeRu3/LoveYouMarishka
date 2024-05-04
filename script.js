@@ -53,3 +53,26 @@ document.addEventListener("DOMContentLoaded", function() {
         }, 8000);
     });
 });
+
+// После открытия модального окна воспоминаний
+memoriesModal.addEventListener('click', function() {
+    // Инициализируем каждый слайдер секции
+    var sectionCarousels = memoriesModal.querySelectorAll('.photo-carousel');
+    sectionCarousels.forEach(function(carousel) {
+        $(carousel).slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            dots: true,
+            infinite: false
+        });
+    });
+});
+
+// После закрытия модального окна воспоминаний
+memoriesCloseBtn.addEventListener('click', function() {
+    // Сбрасываем все слайдеры
+    var sectionCarousels = memoriesModal.querySelectorAll('.photo-carousel');
+    sectionCarousels.forEach(function(carousel) {
+        $(carousel).slick('unslick');
+    });
+});
