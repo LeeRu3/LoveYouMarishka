@@ -154,3 +154,12 @@ button {
 .slick-prev:hover, .slick-next:hover {
     color: #ff3366; /* Цвет при наведении */
 }
+
+.photos-contrainer1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px; /* Ширина контейнера */
+    height: 200px; /* Высота контейнера */
+    border: 1px solid #ccc; /* Пример рамки */
+}
