@@ -59,9 +59,9 @@ noButton.addEventListener('click', function() {
     const warning = document.createElement('p');
     warning.textContent = 'Предупреждение! Данная кнопка неактивна, отказ не принимается!';
     warning.style.color = 'red'; // Применяем красный цвет к тексту предупреждения
+    warning.style.marginTop = '10px'; // Добавляем отступ сверху
     modalContent.appendChild(warning); // Добавляем предупреждение в модальное окно
 });
-
 
 // На кнопку "Да" навешиваем обработчик, который закрывает текущее модальное окно и открывает новое с благодарностью
 yesButton.addEventListener('click', function() {
