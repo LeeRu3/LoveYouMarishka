@@ -53,33 +53,21 @@ secretCloseBtn.addEventListener('click', function() {
 const yesButton = secretModal.querySelector('.yes-button');
 const noButton = secretModal.querySelector('.no-button');
 
-// На кнопку "Нет" навешиваем обработчик, который закрывает текущее модальное окно и отображает предупреждение
+// На кнопку "Нет" навешиваем обработчик, который отображает предупреждение
 noButton.addEventListener('click', function() {
-    secretModal.style.display = 'none'; // Закрываем текущее модальное окно
-    const warning = document.createElement('p');
-    warning.textContent = 'Предупреждение! Данная кнопка неактивна, отказ не принимается!';
-    warning.style.color = 'red'; // Применяем красный цвет к тексту предупреждения
-    warning.style.marginTop = '10px'; // Добавляем отступ сверху
-    const modalContent = document.querySelector('.modal-content'); // Находим контейнер модального окна
-    modalContent.appendChild(warning); // Добавляем предупреждение в контейнер модального окна
+    const warning = secretModal.querySelector('.warning');
+    warning.style.display = 'block'; // Отображаем предупреждение
 });
 
 // На кнопку "Да" навешиваем обработчик, который закрывает текущее модальное окно и открывает новое с благодарностью
 yesButton.addEventListener('click', function() {
     secretModal.style.display = 'none'; // Закрываем текущее модальное окно
-    const thankYouModal = document.createElement('div');
-    thankYouModal.classList.add('modal');
+    const thankYouModal = document.getElementById('thankYouModal');
     thankYouModal.style.display = 'block'; // Показываем новое модальное окно
-    const thankYouContent = document.createElement('div');
-    thankYouContent.classList.add('modal-content');
-    thankYouContent.style.background = 'linear-gradient(to bottom, #ffe6f2, #ffcce6)'; // Градиент переливающийся пастельных тонов
-    thankYouContent.style.borderRadius = '10px'; // Закругленные углы
-    thankYouContent.style.padding = '20px';
-    const thankYouMessage = document.createElement('p');
-    thankYouMessage.textContent = 'Спасибо за ваш выбор, ваш ответ уже был отправлен вашему мужу ❤️';
-    thankYouContent.appendChild(thankYouMessage);
-    thankYouModal.appendChild(thankYouContent);
-    document.body.appendChild(thankYouModal);
+    // Автоматическое закрытие окна благодарности через 8 секунд
+    setTimeout(function() {
+        thankYouModal.style.display = 'none';
+    }, 8000);
 });
 
 // Находим крестик в модальном окне благодарности
