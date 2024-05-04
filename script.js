@@ -53,14 +53,15 @@ secretCloseBtn.addEventListener('click', function() {
 const yesButton = secretModal.querySelector('.yes-button');
 const noButton = secretModal.querySelector('.no-button');
 
-// На кнопку "Нет" навешиваем обработчик, который делает кнопку красной и выводит предупреждение
+// На кнопку "Нет" навешиваем обработчик, который закрывает текущее модальное окно и отображает предупреждение
 noButton.addEventListener('click', function() {
-    noButton.style.backgroundColor = '#ff6666'; // Красный цвет
+    secretModal.style.display = 'none'; // Закрываем текущее модальное окно
     const warning = document.createElement('p');
     warning.textContent = 'Предупреждение! Данная кнопка неактивна, отказ не принимается!';
     warning.style.color = 'red'; // Применяем красный цвет к тексту предупреждения
     warning.style.marginTop = '10px'; // Добавляем отступ сверху
-    modalContent.appendChild(warning); // Добавляем предупреждение в модальное окно
+    const modalContent = document.querySelector('.modal-content'); // Находим контейнер модального окна
+    modalContent.appendChild(warning); // Добавляем предупреждение в контейнер модального окна
 });
 
 // На кнопку "Да" навешиваем обработчик, который закрывает текущее модальное окно и открывает новое с благодарностью
