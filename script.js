@@ -40,7 +40,8 @@ document.addEventListener("DOMContentLoaded", function() {
         warning.textContent = 'Предупреждение! Данная кнопка неактивна, отказ не принимается, дамочка ❤️';
         warning.classList.add('warning');
         warning.style.color = 'red';
-        secretModal.appendChild(warning);
+        const secretModalContent = secretModal.querySelector('.modal-content');
+        secretModalContent.appendChild(warning);
     });
 
     yesButton.addEventListener('click', function() {
