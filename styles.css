@@ -82,14 +82,22 @@ button {
     transform-origin: top left;
 }
 
-.photo-1 {
-    transform: rotate(2deg); /* Поворот первой фотографии на 5 градусов влево */
+.photo-overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.question {
+    margin: 0 0 10px;
 }
 
 .button-container {
     display: flex;
     justify-content: space-around;
-    margin-top: 10px;
 }
 
 .yes-button {
