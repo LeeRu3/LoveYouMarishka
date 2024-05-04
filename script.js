@@ -32,63 +32,49 @@ giftCloseBtn.addEventListener('click', function() {
     giftModal.style.display = 'none'; // Закрываем модальное окно
 });
 
-// Находим кнопку "секрет" и навешиваем на неё обработчик события click
+// На кнопку "секрет" и модальное окно по их id
 const secretBtn = document.getElementById('secretBtn');
+const secretModal = document.getElementById('secretModal');
 
+// На кнопку "секрет" навешиваем обработчик события click
 secretBtn.addEventListener('click', function() {
-    console.log('Нажата кнопка "Секрет"');
-    // Создаем модальное окно с вопросом и кнопками
-    const secretModal = document.createElement('div');
-    secretModal.classList.add('modal');
-    secretModal.style.display = 'block'; // Устанавливаем модальному окну стиль display: block;
-    const modalContent = document.createElement('div');
-    modalContent.classList.add('modal-content');
-    modalContent.style.background = 'linear-gradient(to bottom, #ffe6f2, #ffcce6)'; // Градиент переливающийся пастельных тонов
-    modalContent.style.border = '2px solid #ff66a3'; // Розовая обводка
-    modalContent.style.borderRadius = '10px'; // Закругленные углы
-    modalContent.style.padding = '20px';
-    
-    // Добавляем вопрос в модальное окно
-    const question = document.createElement('p');
-    question.textContent = 'Наше будущее будет выглядеть именно так, если ты станешь моей женой, ты скажешь мне "да"?';
-    modalContent.appendChild(question);
-    
-    // Добавляем кнопки "Да" и "Нет"
-    const yesButton = document.createElement('button');
-    yesButton.textContent = 'Да';
-    yesButton.classList.add('yes-button');
-    modalContent.appendChild(yesButton);
-    
-    const noButton = document.createElement('button');
-    noButton.textContent = 'Нет';
-    noButton.classList.add('no-button');
-    modalContent.appendChild(noButton);
+    secretModal.style.display = 'block'; // Показываем модальное окно
+});
 
-    // На кнопку "Нет" навешиваем обработчик, который делает кнопку красной и выводит предупреждение
-    noButton.addEventListener('click', function() {
-        noButton.style.backgroundColor = '#ff6666'; // Красный цвет
-        const warning = document.createElement('p');
-        warning.textContent = 'Предупреждение! Данная кнопка неактивна, отказ не принимается!';
-        modalContent.appendChild(warning);
-    });
+// Находим крестик в модальном окне секрета
+const secretCloseBtn = secretModal.querySelector('.close');
 
-    // На кнопку "Да" навешиваем обработчик, который закрывает текущее модальное окно и открывает новое с благодарностью
-    yesButton.addEventListener('click', function() {
-        secretModal.style.display = 'none'; // Закрываем текущее модальное окно
-        const thankYouModal = document.createElement('div');
-        thankYouModal.classList.add('modal');
-        const thankYouContent = document.createElement('div');
-        thankYouContent.classList.add('modal-content');
-        thankYouContent.style.background = 'linear-gradient(to bottom, #ffe6f2, #ffcce6)'; // Градиент переливающийся пастельных тонов
-        thankYouContent.style.borderRadius = '10px'; // Закругленные углы
-        thankYouContent.style.padding = '20px';
-        const thankYouMessage = document.createElement('p');
-        thankYouMessage.textContent = 'Спасибо за ваш выбор, ваш ответ уже был отправлен вашему мужу ❤️';
-        thankYouContent.appendChild(thankYouMessage);
-        thankYouModal.appendChild(thankYouContent);
-        document.body.appendChild(thankYouModal);
-    });
+// На крестик также навешиваем обработчик события click
+secretCloseBtn.addEventListener('click', function() {
+    secretModal.style.display = 'none'; // Закрываем модальное окно
+});
 
-    secretModal.appendChild(modalContent);
-    document.body.appendChild(secretModal);
+// Находим кнопку "Да" и "Нет" в модальном окне секрета
+const yesButton = secretModal.querySelector('.yes-button');
+const noButton = secretModal.querySelector('.no-button');
+
+// На кнопку "Нет" навешиваем обработчик, который делает кнопку красной и выводит предупреждение
+noButton.addEventListener('click', function() {
+    noButton.style.backgroundColor = '#ff6666'; // Красный цвет
+    const warning = document.createElement('p');
+    warning.textContent = 'Предупреждение! Данная кнопка неактивна, отказ не принимается!';
+    secretModal.appendChild(warning);
+});
+
+// На кнопку "Да" навешиваем обработчик, который закрывает текущее модальное окно и открывает новое с благодарностью
+yesButton.addEventListener('click', function() {
+    secretModal.style.display = 'none'; // Закрываем текущее модальное окно
+    const thankYouModal = document.createElement('div');
+    thankYouModal.classList.add('modal');
+    thankYouModal.style.display = 'block'; // Показываем новое модальное окно
+    const thankYouContent = document.createElement('div');
+    thankYouContent.classList.add('modal-content');
+    thankYouContent.style.background = 'linear-gradient(to bottom, #ffe6f2, #ffcce6)'; // Градиент переливающийся пастельных тонов
+    thankYouContent.style.borderRadius = '10px'; // Закругленные углы
+    thankYouContent.style.padding = '20px';
+    const thankYouMessage = document.createElement('p');
+    thankYouMessage.textContent = 'Спасибо за ваш выбор, ваш ответ уже был отправлен вашему мужу ❤️';
+    thankYouContent.appendChild(thankYouMessage);
+    thankYouModal.appendChild(thankYouContent);
+    document.body.appendChild(thankYouModal);
 });
