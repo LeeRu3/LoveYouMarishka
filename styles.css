@@ -41,6 +41,16 @@ button {
     height: 100%;
     overflow: auto;
     background-color: rgba(0,0,0,0.4);
+    border: 2px solid #ff66a3; /* Розовая обводка */
+    border-radius: 10px; /* Закругленные углы */
+}
+
+.warning {
+    background-color: #ffe6f2; /* Пастельный фон */
+    border: 2px dashed #ff66a3; /* Розовая прерывистая рамка */
+    padding: 10px; /* Поля вокруг текста */
+    border-radius: 5px; /* Закругленные углы */
+    margin-top: 10px; /* Отступ сверху */
 }
 
 .modal-content {
