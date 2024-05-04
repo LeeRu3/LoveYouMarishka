@@ -119,3 +119,38 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
+
+/* Стили для секций и слайдеров */
+.section {
+    margin-bottom: 20px;
+}
+
+.section h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.photo-carousel {
+    display: flex;
+    justify-content: space-between;
+}
+
+.photo-carousel img {
+    max-width: 30%;
+    border-radius: 5px;
+}
+
+/* Стили для красивой рамки слайдера */
+.slick-dots li button:before {
+    color: #ff66a3; /* Розовый цвет */
+}
+
+.slick-prev, .slick-next {
+    color: #ff66a3; /* Розовый цвет */
+    font-size: 20px;
+}
+
+.slick-prev:hover, .slick-next:hover {
+    color: #ff3366; /* Цвет при наведении */
+}
