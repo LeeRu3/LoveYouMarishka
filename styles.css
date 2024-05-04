@@ -86,16 +86,6 @@ button {
     transform: rotate(2deg); /* Поворот первой фотографии на 5 градусов влево */
 }
 
-.message-frame {
-    background-color: #ff99cc; /* Розовый цвет для рамки */
-    border: 2px solid #ff66a3; /* Розовый цвет для рамки */
-    padding: 10px;
-    border-radius: 5px; /* Закругленные углы */
-    width: 80%; /* Ширина блока с рамкой */
-    max-width: 400px; /* Максимальная ширина */
-    margin: 20px auto; /* Отступы по вертикали и горизонтали */
-}
-
 .button-container {
     display: flex;
     justify-content: space-around;
