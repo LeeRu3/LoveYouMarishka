@@ -32,34 +32,31 @@ giftCloseBtn.addEventListener('click', function() {
     giftModal.style.display = 'none'; // Закрываем модальное окно
 });
 
-// Находим фотографию "loveyou.png" по ее классу
-const photoContainer = document.querySelector('.photo-container');
-const photoOverlay = photoContainer.querySelector('.photo-overlay');
+// Находим кнопку "секрет" и навешиваем на неё обработчик события click
+const secretBtn = document.getElementById('secretBtn');
 
-// Навешиваем обработчик события click на подложку фотографии
-photoOverlay.addEventListener('click', function(event) {
-    event.stopPropagation(); // Предотвращаем всплытие события
-    // Создаем модальное окно с вопросом
-    const photoModal = document.createElement('div');
-    photoModal.classList.add('modal');
+secretBtn.addEventListener('click', function() {
+    // Создаем модальное окно с вопросом и кнопками
+    const secretModal = document.createElement('div');
+    secretModal.classList.add('modal');
     const modalContent = document.createElement('div');
     modalContent.classList.add('modal-content');
     modalContent.style.background = 'linear-gradient(to bottom, #ffe6f2, #ffcce6)'; // Градиент переливающийся пастельных тонов
     modalContent.style.border = '2px solid #ff66a3'; // Розовая обводка
     modalContent.style.borderRadius = '10px'; // Закругленные углы
     modalContent.style.padding = '20px';
-
+    
     // Добавляем вопрос в модальное окно
     const question = document.createElement('p');
-    question.textContent = 'Наше будущее будет выглядеть именно так, если ты станешь моей женой. Ты готова сказать "Да"?';
+    question.textContent = 'Наше будущее будет выглядеть именно так, если ты станешь моей женой, ты скажешь мне "да"?';
     modalContent.appendChild(question);
-
+    
     // Добавляем кнопки "Да" и "Нет"
     const yesButton = document.createElement('button');
     yesButton.textContent = 'Да';
     yesButton.classList.add('yes-button');
     modalContent.appendChild(yesButton);
-
+    
     const noButton = document.createElement('button');
     noButton.textContent = 'Нет';
     noButton.classList.add('no-button');
@@ -75,7 +72,7 @@ photoOverlay.addEventListener('click', function(event) {
 
     // На кнопку "Да" навешиваем обработчик, который закрывает текущее модальное окно и открывает новое с благодарностью
     yesButton.addEventListener('click', function() {
-        photoModal.style.display = 'none'; // Закрываем текущее модальное окно
+        secretModal.style.display = 'none'; // Закрываем текущее модальное окно
         const thankYouModal = document.createElement('div');
         thankYouModal.classList.add('modal');
         const thankYouContent = document.createElement('div');
@@ -90,6 +87,6 @@ photoOverlay.addEventListener('click', function(event) {
         document.body.appendChild(thankYouModal);
     });
 
-    photoModal.appendChild(modalContent);
-    document.body.appendChild(photoModal);
+    secretModal.appendChild(modalContent);
+    document.body.appendChild(secretModal);
 });
